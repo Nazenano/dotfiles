@@ -1,0 +1,44 @@
+/*Hides various elements*/
+.titlebar-buttonbox-container,
+#back-button,
+#forward-button,
+.tabs-newtab-button{
+    display: none !important;
+}
+
+/*Hides text in searchbar*/
+#urlbar *|input::placeholder {
+    color: transparent !important;
+    opacity: 0 !important;
+}
+
+/* #urlbar { */
+/*     width: 50rem !important; */
+/* } */
+
+/*Fixes the padding issue after removing titlebar buttons*/
+.titlebar-spacer {
+    width: 5px !important;
+}
+
+/* #PanelUI-menu-button { */
+/*     margin-right: 0 !important; */
+/* } */
+
+/*On hover navbar*/
+#nav-bar {
+  margin-top: -35px;
+  margin-bottom: 0;
+  z-index: -100;
+  transition: all 0.3s ease !important;
+  opacity: 0;
+}
+
+#navigator-toolbox:focus-within > #nav-bar,
+#navigator-toolbox:hover > #nav-bar
+{
+  margin-top: 0;
+  margin-bottom: -1px;
+  z-index: 100;
+  opacity: 1;
+}

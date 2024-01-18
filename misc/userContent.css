@@ -1,0 +1,22 @@
+/*Changes the home and newtab page*/
+@-moz-document url-prefix(about:home), url-prefix(about:newtab) {
+
+    body::before {
+        content: "\3088\3046\3053\305d";
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 55px;
+        color: white;
+        z-index: 9999;
+        font-family: "Arial", sans-serif;
+    }
+
+    @media (prefers-color-scheme: light) {
+        body::before {
+            color: black;
+        }
+    }
+}
+
